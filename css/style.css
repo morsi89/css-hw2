@@ -2,8 +2,10 @@ body{
   font-family:'Ariel', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 150%;
   text-align: left;
-  /*text-align: center;*/
-  background-color: lightyellow;
+  text-align: center;
+  background-color:  lightcyan;
+  padding: 2px;
+  margin: 10px;
 }
 
 header{
@@ -14,28 +16,43 @@ nav{
   display: inline-block;
   justify-content: center;
   align-items: center;
-  background-color: azure;
-  width: 80%;
+  background-color: lightcyan;
+  width: 100%;
+ 
 }
 nav li{
   display: inline-block;
-   
-}
-/*nav a {
-  
-}*/
-header img{
-       width:10%;
-       position: relative;
-       top: 25px;
+  background-color: powderblue;
+  border: 3px solid darkblue;
+  padding: 2px 8px;
+  border-radius: 8px;
+  margin: 10px;
+ }
+.link_le{
+  text-decoration: none;
+ }
+.link_le:hover {
+ color: beige;
 }
 main{
-   background-color: azure;
+   background-color: lightcyan;
    font-size: 25px;
    text-align: center;
-  
 }
-
+/* Main to content link style */
+.link_main{
+  position: absolute;
+  left: -1000px; /* elrejti a képernyőn kívül */
+  color: #ffffff;
+}
+/* Main to content link tab button */
+.link_main:focus{
+  position: absolute;
+  left: 10px; /* Tab-bal fókuszt kapva megjelenik */
+ top: 10px;
+ color: black;
+ z-index: 9999;
+}
 ul{
   display: flex;  /*megváltoztatom ezt a tulajdonságot, hogy flex legyen*/
   flex-direction: row;
@@ -45,40 +62,101 @@ footer{
   background-color: azure;
  }
 
-/*li{
-  display: inline-block;
-  width: 250px;
-  height: 50px;
-  
-}*/
-
 h1{
   text-align: center;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   color: blue;
+  
+  border: 4px solid darkblue;
+  padding: 2px;
+  margin: 10px;
 }
-
+h4{
+  text-align: center;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
 p{
   line-height: 40px;
 }
-
-.grid{
+/*home page*/
+.ered{
     display: grid;
     grid-template-columns: 40% 40%;
     justify-content: space-evenly;
     align-items: center;
     row-gap: 20px;
+    
 }
+.ered img{
+  width:100%;
+  background-color: blue;
+  border: 1px solid darkblue;
+  padding: 2px;
+  margin: 10px;
+  /*Homályosítás*/
+  filter: blur(3px);
+  transition: all 0.4s ease;
+     }
+/*Homályosítás*/
+.ered img:hover {
+   filter: blur(0);
+ 		}
+/*europian grid*/
+.grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 20px;
+}
+/*europian grid img*/
 .grid img{
    width:100%;
-  /*width: 250px;*/
-  /*height:250px;*/
+  background-color: blue;
+  border: 1px solid darkblue;
+  padding: 2px;
+  margin: 10px;
+   /*Homályosítás*/
+  filter: blur(3px);
+  transition: all 0.4s ease;
 }
+/*Homályosítás*/
+.grid img:hover {
+   filter: blur(0);
+ }
+/*asian flex*/
 .flex{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.asian_flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/*transform*/
+.asian_flex img:nth-child(odd){
+  border-radius: 50px;
+}
+.asian_flex img{
+  background-color: blue;
+  border: 2px solid darkblue;
+  padding: 2px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 100%;
+    /*Homályosítás*/
+  filter: blur(3px);
+  transition: all 0.4s ease;
+}
+/*Homályosítás*/
+.asian_flex img:hover {
+  transform: scale(0.95) rotate(-2deg);
+filter: contrast(150%);
+   /*filter: blur(0);*/
+ 		}
 .footer{
   text-align: center;
    
